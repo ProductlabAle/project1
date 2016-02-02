@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:500,300,700,400" rel="stylesheet" type="text/css">
 	<link href="css/main.css" rel="stylesheet" />
 
@@ -19,9 +19,12 @@
 
 	<div class="main">
 		<div class="container">
-            <input type="text" ng-model="title">
+
 			<h1>{{ title }}</h1>
 			<h2>{{ promo }}</h2>
+			<div ng-repeat="title in pitName">
+			{{	pitName.title	}}
+			</div>
 		</div>
 	</div>
 
