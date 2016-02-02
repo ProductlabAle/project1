@@ -1,0 +1,1 @@
+var app = angular.module("Livemap", []); //viene crato un modulo con il nome myApp e un array vuoto
