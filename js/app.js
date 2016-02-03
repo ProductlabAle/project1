@@ -1,7 +1,6 @@
-(function () {
-	var app = angular.module("livemap", []); //viene crato un modulo con il nome Livemap e un array vuoto (dependencies)
-	app.controller("PitList", function () {
-		this.pits = ids;
-	});
-	var ids = (D:\angular\project1\json\pits.json);
-})();
+var livemap = angular.module("livemap", ["livemapServices", "livemapControllers"]); //viene crato un modulo con il nome Livemap e un array vuoto (dependencies)
+
+livemap.config(['$resourceProvider', function($resourceProvider) {
+  // Don't strip trailing slashes from calculated URLs
+  $resourceProvider.defaults.stripTrailingSlashes = false;
+}]);

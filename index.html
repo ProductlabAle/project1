@@ -2,50 +2,52 @@
 <html ng-app="livemap">
 
 <head>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:500,300,700,400" rel="stylesheet" type="text/css">
-	<link href="css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500,300,700,400" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" />
 
-	<!-- Include the AngularJS library -->
-	<script type="text/javascript" src="js/shared/angular.js"></script>
+    <!-- Include the AngularJS library -->
+    <script type="text/javascript" src="js/shared/angular.js"></script>
+    <script type="text/javascript" src="js/shared/angular-resource.js"></script>
 </head>
 
-<body ng-controller="PitList as list">
-	<div class="header">
-		<div class="container">
-			<h1>ProductLab Livemap</h1>
-		</div>
-	</div>
-	<div class="main">
-		<div class="container">
-			<!--<h1>{{ title }}</h1>
-			<h2>{{ promo }}</h2>-->
-			<!--<div ng-repeat="title in pitName">
-				<p>{{ pitName.title }}</p>
-			</div>-->
-		<div ng-repeat = "pit in list.pits">
-			<p>id:		{{pit.id}}</p>
-			<p>lat:		{{pit.latitude}}</p>
-			<p>lon:		{{pit.longitude}}</p>
-			<p>alt:		{{pit.altitude}}</p>
-			<p>thumb:	{{pit.thumb}}</p>
-		</div>
-		</div>
-	</div>
+<body>
+    <div class="header" ng-controller="headerController">
+        <div class="container">
+            <h1>{{ title }}</h1>
+        </div>
+    </div>
+    <div class="main" ng-controller="PitList">
+        <div class="container">
+            <div ng-repeat="pit in pits">
+                <p>id: {{pit.id}}</p>
+                <p>lat: {{pit.latitude}}</p>
+                <p>lon: {{pit.longitude}}</p>
+                <p>alt: {{pit.altitude}}</p>
+                <p>thumb: {{pit.thumb}}</p>
+            </div>
+        </div>
+    </div>
 
-	<div class="footer">
-		<div class="container">
-			<h2>Available for iPhone and Android.</h2>
-			<img ng-src="{{ logo }}" width="120px" />
-		</div>
-	</div>
+    <div class="footer" ng-controller="footerController">
+        <div class="container">
+            <h2>Available for iPhone and Android.</h2>
+            <img ng-src="{{ logo }}" width="120px" />
+        </div>
+    </div>
 
 
-	<!-- Modules -->
-	<script type="text/javascript" src="js/app.js"></script>
 
-	<!-- Controllers -->
-	<script type="text/javascript" src="js/controllers/MainController.js"></script>
+    <!-- Modules -->
+    <!--<script src="js/services/av.js"></script>-->
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <!-- Controllers -->
+    <script type="text/javascript" src="js/controllers/livemapControllers.js"></script>
+
+    <!--services-->
+    <script src="js/services/livemapServices.js"></script>
 
 </body>
+
 </html>
