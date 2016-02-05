@@ -1,12 +1,13 @@
 <div class="main">
 	<div class="container">
-		<h1 class="list-group-item col-md-8 col-md-offset-2">{{ title }}</h1>
-		<div class="results col-md-8 col-md-offset-2" ng-repeat="pit in pits">
-			<p class="list-group-item">id: {{pit.id}}</p>
-			<p class="list-group-item">lat: {{pit.latitude}}</p>
-			<p class="list-group-item">lon: {{pit.longitude}}</p>
-			<p class="list-group-item">alt: {{pit.altitude}}</p>
-			<p class="list-group-item">thumb: {{pit.thumb}}</p>
+		<h1 class="list-group-item col-md-8 col-md-offset-2" style="color:red; text-align: center">{{ title }}</h1>
+		<div class="results col-md-8 col-md-offset-2" ng-repeat="pit in pits" style="padding-bottom: 10px;
+border: solid 1px grey; border-radius: 5px">
+			<p class="list-group-item">Id: {{pit.id}}</p>
+			<p class="list-group-item">Lat: {{pit.latitude}}</p>
+			<p class="list-group-item">Lon: {{pit.longitude}}</p>
+			<p class="list-group-item">Alt: {{pit.altitude}}</p>
+			<img class="list-group-item center-block" src={{pit.thumb}}></img>
 			<a href="#/pitdetail/{{$index}}">PIT Detail</a>
 		</div>
 	</div>

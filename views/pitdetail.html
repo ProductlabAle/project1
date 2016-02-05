@@ -1,13 +1,15 @@
 <div class="main">
 	<div class="container">
-		<h1 class="list-group-item col-md-8 col-md-offset-2">{{ title }}</h1>
-		<div class="results col-md-8 col-md-offset-2" ng-src="{{ }}">
-			<p class="list-group-item">id: {{pits[pitId].id}}</p>
-			<p class="list-group-item">lat: {{pits[pitId].latitude}}</p>
-			<p class="list-group-item">lon: {{pits[pitId].longitude}}</p>
-			<p class="list-group-item">alt: {{pits[pitId].altitude}}</p>
-			<p class="list-group-item">thumb: {{pits[pitId].thumb}}</p>
-			<a href="#/pitlist/">Back to PIT List</a><!--ritorna alla lista-->
+		<h1 class="list-group-item col-md-8 col-md-offset-2" style="color:red; text-align: center">{{ title }}</h1>
+		<div class="results col-md-8 col-md-offset-2" ng-src="{{ }}" style="border: solid 1px grey; border-radius: 5px">
+			<p class="list-group-item">Id: {{pits[pitId].id}}</p>
+			<p class="list-group-item">Lat: {{pits[pitId].latitude}}</p>
+			<p class="list-group-item">Lon: {{pits[pitId].longitude}}</p>
+			<p class="list-group-item">Alt: {{pits[pitId].altitude}}</p>
+			<img class="list-group-item center-block" src={{pits[pitId].thumb}}></img>
+			<p class="list-group-item">Descr. Breve: {{pits[pitId].descr_short}}</p>
+			<p class="list-group-item">Descr. completa: {{pits[pitId].descr_long}}</p>
+			<a href="#/pitslist/">Back to PIT List</a><!--ritorna alla lista-->
 		</div>
 	</div>
 </div>
