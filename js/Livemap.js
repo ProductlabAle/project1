@@ -8,6 +8,10 @@ var livemap = angular.module("livemap", ["ngRoute", "livemapControllers", "ui.bo
 livemap.config(["$routeProvider", function ($routeProvider) {
 	$routeProvider
 		.when("/", {
+			controller: "SplashController",
+			templateUrl: "views/splash.html"
+		})
+		.when("/pitslist/", {
 			controller: "PitListController",
 			templateUrl: "views/pitlist.html"
 		})
