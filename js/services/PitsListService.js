@@ -11,7 +11,7 @@
 		});
   }]);*/
 
-livemapServices.factory('PitsList', ['$http',
+livemap.factory("$PitsList", ['$http',
   function ($http) {
 		return $http.get('json/pits.json')
 			.success(function (data) {

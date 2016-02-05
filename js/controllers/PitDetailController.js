@@ -1,5 +1,5 @@
-livemapControllers.controller("PitDetailController", ["$scope", "PitsList", "$routeParams", function ($scope, Pits2, $routeParams) {
-	Pits2.success(function (data) {
+livemapControllers.controller("PitDetailController", ["$scope", "$PitsList", "$routeParams", function ($scope, $PitsList, $routeParams) {
+	$PitsList.success(function (data) {
 		//console.log(data);
 		$scope.pitId = $routeParams.pitId;
 		//console.log($routeParams.pitId);
