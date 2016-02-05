@@ -1,4 +1,4 @@
-var livemap = angular.module("livemap", ["ngRoute", "livemapServices", "livemapControllers"]); //viene crato un modulo con il nome Livemap e un array vuoto (dependencies)
+var livemap = angular.module("livemap", ["ngRoute", "livemapServices", "livemapControllers", "ui.bootstrap"]); //viene crato un modulo con il nome Livemap e un array vuoto (dependencies)
 
 /*livemap.config(['$resourceProvider', function ($resourceProvider) {
 	// Don't strip trailing slashes from calculated URLs
