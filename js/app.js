@@ -35,7 +35,7 @@ var livemapControllers = angular.module('livemapControllers', []);
 
 //livemap services
 
-var livemapServices = angular.module('livemapServices', ['ngResource']);
+/*var livemapServices = angular.module('livemapServices', ['ngResource']);
 
 livemapServices.factory('Pits2', ['$http',
   function ($http) {
@@ -46,4 +46,4 @@ livemapServices.factory('Pits2', ['$http',
 			.error(function (data) {
 				return data;
 			});
-  }]);
+  }]);*/
