@@ -1,4 +1,4 @@
-livemapControllers.controller("PitListController", ["$scope", "Pits2", function ($scope, Pits2) {
+livemapControllers.controller("PitListController", ["$scope", "PitsList", function ($scope, Pits2) {
 	Pits2.success(function (data) {
 		//console.log(data);
 		$scope.pits = data;

@@ -1,4 +1,4 @@
-var livemapServices = angular.module('livemapServices', ['ngResource']);
+/*var livemapServices = angular.module('livemapServices', ['ngResource']);*/
 
 /*livemapServices.factory('Pits', ['$resource',
   function ($resource) {
@@ -11,7 +11,7 @@ var livemapServices = angular.module('livemapServices', ['ngResource']);
 		});
   }]);*/
 
-livemapServices.factory('Pits2', ['$http',
+livemapServices.factory('PitsList', ['$http',
   function ($http) {
 		return $http.get('json/pits.json')
 			.success(function (data) {
